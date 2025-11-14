@@ -1,7 +1,7 @@
 function Logement() {
     return (
         <div>
-            <h1> Logement d'amour</h1>
+            <h1> Logement de rêve</h1>
         </div>
     )
 }
