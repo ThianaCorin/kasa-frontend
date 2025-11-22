@@ -1,7 +1,7 @@
-function Banner() {
+function Banner({ image }) {
     return (
         <div>
-            <h1> Banner à venir</h1>
+            <img src={image} alt="Banner" />
         </div>
     )
 }

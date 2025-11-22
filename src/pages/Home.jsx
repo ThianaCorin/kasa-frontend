@@ -1,6 +1,7 @@
 import Banner from "../components/Banner"
 import { useState, useEffect } from 'react'
 import Card from "../components/Card"
+import homeBanner from '../assets/home.png'
 
 function Home() {
 
@@ -16,7 +17,7 @@ function Home() {
     }, [])
     return (
         <div>
-            <Banner />
+            <Banner image={homeBanner} />
             <section>
                 {logements.map((element) => (<Card key={element.id} titre={element.title} cover={element.cover} />)
                 )}
