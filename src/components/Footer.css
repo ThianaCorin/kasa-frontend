@@ -1,10 +1,21 @@
-.footer {
+.footer-container {
     background-color: var(--black);
     color: var(--white);
+    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
+    height: 210px;
+
+}
+
+.footer {
+    align-items: center;
+    align-content: center;
+    gap: 24px;
     display: flex;
     flex-direction: column;
-    height: 210px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
 }

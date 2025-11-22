@@ -17,7 +17,7 @@ function Home() {
     }, [])
     return (
         <div>
-            <Banner image={homeBanner} />
+            <Banner image={homeBanner} title="Chez vous, partout et ailleurs" />
             <section>
                 {logements.map((element) => (<Card key={element.id} titre={element.title} cover={element.cover} />)
                 )}

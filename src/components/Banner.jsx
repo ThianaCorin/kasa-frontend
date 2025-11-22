@@ -1,8 +1,12 @@
-function Banner({ image }) {
+import './Banner.css'
+
+function Banner({ image, title }) {
     return (
-        <div>
+        <section className='banner'>
             <img src={image} alt="Banner" />
-        </div>
+            <div className="banner-overlay"></div>
+            {title && <h1 className="banner-text">{title}</h1>}
+        </section>
     )
 }
 
