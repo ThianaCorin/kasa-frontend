@@ -1,9 +1,16 @@
+import './Card.css'
+
 function Card({ titre, cover }) {
     return (
-        <div>
-            <p>{titre}</p>
-            <img src={cover} alt={titre} />
-        </div>
+        <article className='properties'>
+            <a href="#">
+                <img src={cover} alt={titre} />
+                <div className="card-overlay"></div>
+                <div className="card-title">
+                    <h3>{titre}</h3>
+                </div>
+            </a>
+        </article>
     )
 }
 
