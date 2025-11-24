@@ -2,7 +2,7 @@
     height: 340px;
     display: flex;
     position: relative;
-    border-radius: 25px;
+    border-radius: 10px;
     overflow: hidden;
 }
 

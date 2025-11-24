@@ -1,0 +1,15 @@
+.collapse {}
+
+.collapse-header {
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.collapse-content {
+    background-color: var(--white);
+}
