@@ -1,7 +1,7 @@
-import Banner from "../components/Banner"
+import Banner from "../../components/Banner/Banner"
 import { useState, useEffect } from 'react'
-import Card from "../components/Card"
-import homeBanner from '../assets/home.png'
+import Card from "../../components/Card/Card"
+import homeBanner from '../../assets/home.png'
 import './Home.css'
 
 function Home() {

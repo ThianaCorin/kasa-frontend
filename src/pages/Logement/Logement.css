@@ -1,0 +1,18 @@
+.logement-details h2 {
+    color: var(--primary-color)
+}
+
+.logement-tags {
+    display: flex;
+    gap: 15px;
+}
+
+span {
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 5px;
+    height: 25px;
+    width: 115px;
+    align-items: center;
+}

@@ -8,7 +8,8 @@ function Collapse({ header, content }) {
         <section className="collapse">
             <div className="collapse-header" onClick={toggle}>
                 {header}
-                <i className="fa-solid fa-angle-up"></i>
+                <i className={`fa-solid fa-angle-up ${isOpen ? "open" : ""}`}
+                ></i>
             </div>
 
             <div className="collapse-content">
