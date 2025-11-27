@@ -1,15 +1,41 @@
 .carrousel {
-    max-width: 1240px;
     width: 100%;
     height: 415px;
     display: flex;
     position: relative;
-    margin: 20px 100px;
+    border-radius: 25px;
+    overflow: hidden;
 }
 
-.carrousel img {
+.carrousel-photo {
     width: 100%;
     height: 100%;
     object-fit: cover;
 
+}
+
+.fleche-gauche,
+.fleche-droite {
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.fleche-gauche {
+    left: 20px;
+}
+
+.fleche-droite {
+    right: 20px;
+}
+
+h3 {
+    color: var(--white);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
 }

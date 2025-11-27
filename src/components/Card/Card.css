@@ -1,13 +1,13 @@
 .properties {
-    height: 340px;
-    display: flex;
+    width: 340px;
+    aspect-ratio: 1/1;
     position: relative;
     border-radius: 10px;
     overflow: hidden;
 }
 
 .properties img {
-    height: 340px;
+    height: 100%;
     width: 100%;
     object-fit: cover;
     z-index: 0;
@@ -36,4 +36,26 @@
     z-index: 2;
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .properties {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .properties {
+        width: 90%;
+    }
+
+    .properties-div {
+        gap: 10px;
+        justify-content: center;
+
+    }
+
+
+
 }

@@ -26,3 +26,25 @@ nav div .active {
     border-bottom: var(--black) 2px solid;
     padding-bottom: 1px;
 }
+
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {
+    header {
+        margin: 20px;
+    }
+
+    nav img {
+        width: 145px;
+    }
+
+    nav div {
+        gap: 20px;
+    }
+
+    nav a {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+}

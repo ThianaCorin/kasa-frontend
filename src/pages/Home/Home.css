@@ -1,12 +1,23 @@
-    .properties-section {
-        background-color: #f6f6f6;
-        margin: 50px 100px;
-    }
+.properties-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 50px;
+    background-color: #f6f6f6;
+    border-radius: 25px;
+}
 
-    .properties-div {
-        display: grid;
-        border-radius: 25px;
-        grid-template-columns: repeat(3, minmax(340px, 1fr));
-        grid-row-gap: 50px;
-        grid-column-gap: 60px;
+.properties-div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+
+    .properties-section {
+        padding: 15px 5px;
+        margin: 10px;
     }
+}

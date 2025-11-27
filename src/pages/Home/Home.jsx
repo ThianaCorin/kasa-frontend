@@ -21,7 +21,7 @@ function Home() {
             <Banner image={homeBanner} title="Chez vous, partout et ailleurs" />
             <section className="properties-section">
                 <div className="properties-div">
-                    {logements.map((element) => (<Card key={element.id} titre={element.title} cover={element.cover} />)
+                    {logements.map((element) => (<Card key={element.id} id={element.id} titre={element.title} cover={element.cover} />)
                     )}
                 </div>
             </section>

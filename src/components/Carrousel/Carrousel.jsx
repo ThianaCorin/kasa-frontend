@@ -1,5 +1,7 @@
 import './Carrousel.css'
 import { useState } from 'react';
+import arrowLeft from '../../assets/arrow-left.png'
+import arrowRight from '../../assets/arrow-right.png'
 
 function Carrousel({ images }) {
 
@@ -24,12 +26,12 @@ function Carrousel({ images }) {
     return (
         <div className='carrousel'>
             <div className="fleche-gauche">
-                {images.length > 1 && <p onClick={goToPrevious}>←</p>}
+                {images.length > 1 && <span onClick={goToPrevious}><img src={arrowLeft} alt="arrow_left" /></span>}
             </div>
-            <img src={images[photo]} />
-            {images.length > 1 && <p>{photo + 1} / {images.length}</p>}
+            <img className='carrousel-photo' src={images[photo]} />
+            {images.length > 1 && <h3>{photo + 1} / {images.length}</h3>}
             <div className="fleche-droite">
-                {images.length > 1 && <p onClick={goToNext}>→</p>}
+                {images.length > 1 && <span onClick={goToNext}><img src={arrowRight} alt="arrow_right" /></span>}
             </div>
         </div>
     )

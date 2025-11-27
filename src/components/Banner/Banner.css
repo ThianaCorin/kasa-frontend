@@ -39,3 +39,29 @@
     white-space: nowrap;
     margin: 0;
 }
+
+@media (max-width: 768px) {
+
+    .banner {
+        height: 140px;
+        margin: 20px;
+        border-radius: 15px;
+    }
+
+    .banner img,
+    .banner-overlay {
+        border-radius: 15px;
+
+    }
+
+    .banner-text {
+        font-size: 24px;
+        white-space: normal;
+        width: 70%;
+        text-align: left;
+        left: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+
+    }
+}
