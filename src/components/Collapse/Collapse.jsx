@@ -12,8 +12,8 @@ function Collapse({ header, content }) {
                 ></i>
             </div>
 
-            <div className="collapse-content">
-                {isOpen && content}
+            <div className={`collapse-content ${isOpen ? " show" : ""}`}>
+                {content}
             </div>
         </section>
     )

@@ -7,12 +7,24 @@ import './Home.css'
 function Home() {
 
     const [logements, setLogements] = useState([])
-    console.log(logements)
+    const [isLoading, setIsLoading] = useState(true)
+    const [error, setError] = useState(false)
+    // console.log(logements)
+
     useEffect(() => {
+
         const getLogements = async () => {
-            const reponse = await fetch("http://localhost:8080/api/properties")
-            const data = await reponse.json()
-            setLogements(data)
+            try {
+                const reponse = await fetch("http://localhost:8080/api/properties")
+                const data = await reponse.json()
+                setLogements(data)
+                setIsLoading(false)
+            }
+            catch {
+                setError(true)
+                setIsLoading(false)
+            }
+            console.log(logements)
         }
         getLogements()
     }, [])
@@ -21,7 +33,9 @@ function Home() {
             <Banner image={homeBanner} title="Chez vous, partout et ailleurs" />
             <section className="properties-section">
                 <div className="properties-div">
-                    {logements.map((element) => (<Card key={element.id} id={element.id} titre={element.title} cover={element.cover} />)
+                    {isLoading && <h3>Recherche de logements en cours...</h3>}
+                    {error && <h3>Une erreur s'est produite lors du chargement des logements. Veuillez actualiser la page.</h3>}
+                    {!isLoading && !error && logements.map((element) => (<Card key={element.id} id={element.id} titre={element.title} cover={element.cover} />)
                     )}
                 </div>
             </section>

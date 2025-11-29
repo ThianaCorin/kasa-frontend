@@ -6,9 +6,8 @@ section.logement {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 24px;
 }
-
-
 
 .logement-details h2 {
     color: var(--primary-color)
@@ -17,14 +16,25 @@ section.logement {
 .logement-tags {
     display: flex;
     gap: 15px;
+    text-align: center;
 }
 
 .host-details {
     color: var(--primary-color);
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
 .host-details img {
     border-radius: 100px;
+}
+
+.host-and-rating {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: end;
 }
 
 .star-active {
@@ -38,9 +48,9 @@ section.logement {
 .logement-tags span {
     color: var(--white);
     background-color: var(--primary-color);
+    align-content: center;
     border-radius: 10px;
     padding: 5px;
     height: 25px;
-    width: 115px;
-    align-items: center;
+    min-width: 115px;
 }

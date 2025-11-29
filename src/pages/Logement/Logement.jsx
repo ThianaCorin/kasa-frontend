@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useParams, Navigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import Carrousel from "../../components/Carrousel/Carrousel"
 import '../Logement/Logement.css'
@@ -6,7 +6,6 @@ import Collapse from "../../components/Collapse/Collapse"
 
 function Logement() {
     const [logements, setLogements] = useState([])
-    console.log(logements)
     useEffect(() => {
         const getLogements = async () => {
             const reponse = await fetch("http://localhost:8080/api/properties")
@@ -17,15 +16,12 @@ function Logement() {
     }, [])
 
     const { logementId } = useParams()
-    console.log(logementId)
     const logement = logements.find(l => l.id === logementId);
-    // console.log(logement)
-    // console.log(Array.isArray(logement.tags))
-    // console.log(logement.tags)
-    // console.log(logement.rating, typeof logement.rating)
 
-    // console.log(logement.equipments)
-    // console.log(Array.isArray(logement.equipments))
+    // Si les logements sont chargés mais qu'on ne trouve pas le logement, rediriger vers 404
+    if (logements.length > 0 && !logement) {
+        return <Navigate to="*" replace />
+    }
 
     return (
         <section className="logement">
@@ -47,7 +43,7 @@ function Logement() {
                     {logement && (
                         <div className="logement-rating">
                             {Array(5).fill(0).map((_, index) =>
-                                index < parseInt(logement.rating) ? (<i className="fa-solid fa-star fa-2xl star-active"></i>) : (<i className="fa-solid fa-star fa-2xl star-inactive"></i>)
+                                index < parseInt(logement.rating) ? (<i key={index} className="fa-solid fa-star fa-2xl star-active"></i>) : (<i className="fa-solid fa-star fa-2xl star-inactive"></i>)
                             )}
                         </div>)}
                 </div>
