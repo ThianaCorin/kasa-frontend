@@ -23,6 +23,10 @@ function Logement() {
         return <Navigate to="*" replace />
     }
 
+    // Séparer prénom et nom pour l'affichage en deux lignes
+    const prenom = logement && logement.host.name.split(' ')[0]
+    const nom = logement && logement.host.name.split(' ')[1]
+
     return (
         <section className="logement">
             {/* on doit attendre que logement existe avant de pouvoir l'afficher, soit avec un if, soit avec &&  */}
@@ -37,7 +41,7 @@ function Logement() {
                 </div>
                 <div className="host-and-rating">
                     <div className="host-details">
-                        {logement && <p>{logement.host.name}</p>}
+                        {logement && <p>{prenom}<br />{nom}</p>}
                         {logement && <img src={logement.host.picture} />}
                     </div>
                     {logement && (
@@ -49,8 +53,12 @@ function Logement() {
                 </div>
             </div>
             <div className="logement-collapse">
-                {logement && <Collapse header="Description" content={logement.description} />}
-                {logement && <Collapse header="Équipements" content={<ul>{logement.equipments.map(equipement => (<li key={equipement}>{equipement}</li>))}</ul>} />}
+                <div className="logement-column">
+                    {logement && <Collapse header="Description" content={logement.description} />}
+                </div>
+                <div className="logement-column">
+                    {logement && <Collapse header="Équipements" content={<ul>{logement.equipments.map(equipement => (<li key={equipement}>{equipement}</li>))}</ul>} />}
+                </div>
             </div>
         </section>
 

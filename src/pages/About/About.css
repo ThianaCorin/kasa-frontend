@@ -1,5 +1,9 @@
 .about-collapse {
-    max-width: 100%;
-    margin: auto;
     padding-bottom: 20px;
+    max-width: 75%;
+    margin: 20px auto;
+}
+
+.about-row {
+    padding: 10px;
 }

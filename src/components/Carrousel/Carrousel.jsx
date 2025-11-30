@@ -13,7 +13,7 @@ function Carrousel({ images }) {
         else {
             setPhoto(photo + 1)
         }
-        console.log("clic →, photo =", photo);
+        // console.log("clic →, photo =", photo);
     }
     const goToPrevious = () => {
         if (photo === 0) {
