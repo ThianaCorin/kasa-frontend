@@ -9,7 +9,6 @@ function Home() {
     const [logements, setLogements] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState(false)
-    // console.log(logements)
 
     useEffect(() => {
 
@@ -24,7 +23,6 @@ function Home() {
                 setError(true)
                 setIsLoading(false)
             }
-            console.log(logements)
         }
         getLogements()
     }, [])

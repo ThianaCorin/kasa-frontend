@@ -28,7 +28,7 @@ function Carrousel({ images }) {
             <div className="fleche-gauche">
                 {images.length > 1 && <span onClick={goToPrevious}><img src={arrowLeft} alt="arrow_left" /></span>}
             </div>
-            <img className='carrousel-photo' src={images[photo]} />
+            <img className='carrousel-photo' src={images[photo]} alt="Photo du logement" />
             {images.length > 1 && <h3>{photo + 1} / {images.length}</h3>}
             <div className="fleche-droite">
                 {images.length > 1 && <span onClick={goToNext}><img src={arrowRight} alt="arrow_right" /></span>}

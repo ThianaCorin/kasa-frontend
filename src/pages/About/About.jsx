@@ -11,7 +11,7 @@ function About() {
             <section>
                 <div className='about-collapse'>
                     <div className='about-row'>
-                        <Collapse header="Fiabilité" content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes" />
+                        <Collapse header="Fiabilité" content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes" />
                     </div>
                     <div className='about-row'>
                         <Collapse header="Respect" content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." />
